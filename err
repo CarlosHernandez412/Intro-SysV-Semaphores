@@ -1,0 +1,35 @@
+semget(0x15030416, 1, IPC_CREAT|0666)   = 15564806
+semctl(15564806, 0, SETVAL, NULL)       = 0
+strace: Process 19868 attached
+strace: Process 19869 attached
+strace: Process 19870 attached
+[pid 19868] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2) = 0
+strace: Process 19871 attached
+strace: Process 19872 attached
+[pid 19870] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2 <unfinished ...>
+[pid 19868] semop(15564806, [{0, -1, SEM_UNDO}], 1) = 0
+[pid 19870] <... semop resumed> )       = 0
+[pid 19869] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2 <unfinished ...>
+[pid 19871] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2strace: Process 19873 attached
+ <unfinished ...>
+[pid 19870] semop(15564806, [{0, -1, SEM_UNDO}], 1) = 0
+[pid 19869] <... semop resumed> )       = 0
+[pid 19872] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2 <unfinished ...>
+[pid 19869] semop(15564806, [{0, -1, SEM_UNDO}], 1 <unfinished ...>
+[pid 19871] <... semop resumed> )       = 0
+[pid 19869] <... semop resumed> )       = 0
+[pid 19873] semop(15564806, [{0, 0, SEM_UNDO}, {0, 1, SEM_UNDO}], 2 <unfinished ...>
+[pid 19871] semop(15564806, [{0, -1, SEM_UNDO}], 1) = 0
+[pid 19872] <... semop resumed> )       = 0
+[pid 19872] semop(15564806, [{0, -1, SEM_UNDO}], 1 <unfinished ...>
+[pid 19873] <... semop resumed> )       = 0
+[pid 19872] <... semop resumed> )       = 0
+[pid 19873] semop(15564806, [{0, -1, SEM_UNDO}], 1) = 0
+[pid 19870] +++ exited with 0 +++
+[pid 19872] +++ exited with 0 +++
+[pid 19871] +++ exited with 0 +++
+[pid 19873] +++ exited with 0 +++
+[pid 19869] +++ exited with 0 +++
+[pid 19868] +++ exited with 0 +++
+semctl(15564806, 0, IPC_RMID, NULL)     = 0
++++ exited with 0 +++
